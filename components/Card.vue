@@ -2,7 +2,7 @@
 const props = defineProps(['starship'])
 
 /* 
-*** only an url is present and no ID, we have to get an id from url
+*** only url is present and no ID, we have to get an id from url
 */
 const getId = (url) => {
     try {
