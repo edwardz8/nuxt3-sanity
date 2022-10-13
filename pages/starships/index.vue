@@ -49,7 +49,7 @@
 <script setup>
 const results = ref({})
 const count = ref('')
-const perPage = ref(10)
+const perPage = ref(6)
 const page = ref(1)
 const loadingNext = ref(false)
 const loadingPrev = ref(false)
@@ -61,7 +61,7 @@ count.value = data.value.count
 const fetchPage = async (p) => {
     if (p > page.value) loadingNext.value = true
     else loadingPrev.value = true
-    
+
     try {
         const { data } = await useFetch(
             'https://swapi.dev/api/starships?page=' + p,

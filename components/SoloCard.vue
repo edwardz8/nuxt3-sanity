@@ -14,6 +14,18 @@ const props = defineProps({
   },
   starship_class: {
     type: String
+  },
+  cost_in_credits: {
+    type: String
+  },
+  crew: {
+    type: String
+  },
+  passengers: {
+    type: String
+  },
+  hyperdrive_rating: {
+    type: String
   }
 })
 </script>
@@ -39,6 +51,22 @@ const props = defineProps({
       </p>
       <p class="mt-1 text-gray-800 dark:text-gray-400">
         Class: {{ props.starship_class }}
+        <br />
+      </p>
+      <p class="mt-1 text-gray-800 dark:text-gray-400">
+        Rating: {{ props.hyperdrive_rating }}
+        <br />
+      </p>
+      <p class="mt-1 text-gray-800 dark:text-gray-400">
+        Cost: {{ props.cost_in_credits }}
+        <br />
+      </p>
+      <p class="mt-1 text-gray-800 dark:text-gray-400">
+        Crew #: {{ props.crew }}
+        <br />
+      </p>
+      <p class="mt-1 text-gray-800 dark:text-gray-400">
+        Passenger #: {{ props.passengers }}
         <br />
       </p>
     </div>
