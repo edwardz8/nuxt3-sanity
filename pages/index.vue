@@ -55,7 +55,7 @@ import { Popover, PopoverPanel } from '@headlessui/vue'
                         <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                             <span class="block xl:inline">Star Wars Directory</span>
                             {{ ' ' }}
-                            <span class="block text-orange-700 xl:inline">Made possible with the use of swapi.dev</span>
+                            <span class="block text-orange-700 xl:inline">Made possible by swapi.dev</span>
                         </h1>
                         <p
                             class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
@@ -63,9 +63,7 @@ import { Popover, PopoverPanel } from '@headlessui/vue'
                         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                             <NuxtLink to="/starships">
                                 <div class="rounded-md shadow">
-                                    <a href="#"
-                                        class="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:py-4 md:px-10 md:text-lg">View
-                                        Ships</a>
+                                    <a class="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:py-4 md:px-10 md:text-lg">View Ships</a>
                                 </div>
                             </NuxtLink>
                             <!-- <div class="mt-3 sm:mt-0 sm:ml-3">
