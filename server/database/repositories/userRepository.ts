@@ -44,6 +44,7 @@ export async function createUser(data: IUser) {
       username: data.username,
       name: data.name,
       email: data.email,
+      loginType: data.loginType,
       password: data.password,
     },
   })

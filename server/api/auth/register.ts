@@ -23,6 +23,7 @@ export default async (event: CompatibilityEvent) => {
         username: data.username,
         name: data.name,
         email: data.email,
+        loginType: 'email',
         password: encryptedPassword
     }
 

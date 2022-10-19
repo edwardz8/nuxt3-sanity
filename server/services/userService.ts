@@ -18,6 +18,7 @@ export function sanitizeUserForFrontend(user: IUser | undefined): IUser {
     }
 
     delete user.password
+    delete user.loginType
 
     return user 
 }

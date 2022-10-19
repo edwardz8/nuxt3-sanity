@@ -1013,24 +1013,11 @@ Starting with *getByAuthToken.ts*, let's begin to take the auth functions create
 ```js
 // getByAuthToken.ts
 
-/* import { IUser } from '~/types/IUser';
-import { useCookie } from 'h3'
-import { getUserBySessionToken } from '~~/server/services/sessionService'
-
-export default defineEventHandler<IUser>(async (event) => {
-    const authToken = useCookie(event.req, 'auth_token')
-    const user = await getUserBySessionToken(authToken)
-
-    return user
-}) */
-
 import { IUser } from '~/types/IUser';
 import { getUserBySessionToken } from '~~/server/services/sessionService'
 
 export default defineEventHandler<IUser>(async (event) => {
     const authToken = getCookie(event.req, 'auth_token')
-
-    // setCookie(event.req, 'auth_token', null)
 
     const user = await getUserBySessionToken(authToken)
 
@@ -1223,7 +1210,7 @@ export async function loginWithEmail(email: string, password: string) {
 
 ## Front-End Setup
 
-Create a __middleware__ folder in the root directory with both a __auth.ts__ and __guest.ts__ file.
+Create a __middleware__ folder in the root directory with both an __auth.ts__ and __guest.ts__ file.
 
 
 ##### auth.ts
@@ -1291,9 +1278,9 @@ The state of the user is passed to a *user* variable.
 
 ## External Methods
 
-In the root of the project create a javascript file; the one I'm using is titled: __methods.js__ 
+In the root of the project create a javascript file; the one I'm using is titled: __methods.js__ but you are free to use whatever name you like.
 
-This particular method will utilize a switch statement to read the names of players or teams from the API and pair said player or team with whichever image we we want to display throughout the application.
+This particular method will utilize a switch statement to read the names of ships or people or vehichles from the API and pair the item with whichever image we want to display throughout the application.
 
 With Nuxt, images can be read in the __/public__ folder. Within that directory I created a folder called __img__ where all images can live. Nuxt will automatically read __public__ so all that's required is */img/name-of-asset.png*.
 
