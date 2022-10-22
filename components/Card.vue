@@ -1,17 +1,5 @@
 <script setup>
-const props = defineProps(['starship'])
-
-/* 
-*** only url is present and no ID, we have to get an id from url
-*/
-const getId = (url) => {
-    try {
-        const arr = url.split('/')
-        return arr[arr.length - 2]
-    } catch (error) {
-        return ''
-    }
-}
+const props = defineProps(['item'])
 </script>
 
 <template>
@@ -20,29 +8,13 @@ const getId = (url) => {
   >
     <div class="p-4 md:p-5">
       <h3 class="text-lg font-bold text-gray-800 dark:text-orange-200">
-        {{ starship.name }}
+        {{ item.name }}
       </h3>
-      <p class="mt-1 text-gray-800 dark:text-gray-400">
-        Model: {{ starship.model }}
-        <br />
-      </p>
-      <p class="mt-1 text-gray-800 dark:text-gray-400">
-        Manufacturer: {{ starship.manufacturer }}
-        <br />
-      </p>
-      <p class="mt-1 text-gray-800 dark:text-gray-400">
-        Capacity: {{ starship.cargo_capacity }}
-        <br />
-      </p>
-      <p class="mt-1 text-gray-800 dark:text-gray-400">
-        Class: {{ starship.starship_class }}
-        <br />
-      </p>
       <NuxtLink
         class="mt-3 py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-orange-400 text-white hover:bg-orange-900 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"
-        :to="`/starships/` + getId(starship.url)"
+        :to="`/item/` + item.id"
       >
-        View Starship
+        View Items
       </NuxtLink>
     </div>
   </div>

@@ -22,17 +22,12 @@ async function postRegisterForm() {
 </script>
 
 <template>
-  <div class="h-screen bg-gradient-to-b from-white to-orange-700">
+  <div class="h-screen bg-gradient-to-b from-white to-green-700">
     <div class="flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div class="max-w-md w-full">
         <div class="flex">
-          <!-- <img
-            class="mx-auto h-24 w-auto"
-            src="/img/starwars.png"
-            alt="logo"
-          /> -->
-          <h1 class="py-9 text-center text-3xl font-extrabold text-orange-700">
-            star wars directory
+          <h1 class="py-9 text-center text-3xl font-extrabold text-grey-800">
+            nuxt 3 + sanity + auth demo
           </h1>
         </div>
         <div>

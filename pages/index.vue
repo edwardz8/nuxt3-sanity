@@ -31,12 +31,12 @@ const user = useState("user");
                 <div class="flex w-full items-center justify-between md:w-auto">
                   <a href="#">
                     <span class="sr-only">Star Wars Directory</span>
-                    <!-- <img alt="Your Company" class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=600" /> -->
+                    <!-- <img alt="Your Company" class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=600" /> -->
                   </a>
                 </div>
               </div>
               <!--  <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-                  <a href="#" class="font-medium text-orange-600 hover:text-orange-500">Log in</a>
+                  <a href="#" class="font-medium text-green-600 hover:text-green-500">Log in</a>
                 </div> -->
             </nav>
           </div>
@@ -60,14 +60,14 @@ const user = useState("user");
                   <div>
                     <img
                       class="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=600"
+                      src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=600"
                       alt=""
                     />
                   </div>
                 </div>
                 <a
                   href="#"
-                  class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-orange-600 hover:bg-gray-100"
+                  class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-green-600 hover:bg-gray-100"
                   >Log in</a
                 >
               </div>
@@ -82,42 +82,25 @@ const user = useState("user");
             <h1
               class="text-2xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl"
             >
-              <span class="block xl:inline">Star Wars Directory</span>
-              {{ " " }}
-              <span class="block text-orange-700 xl:inline"
-                >Made possible by swapi.dev</span
-              >
+              <span class="block xl:inline">Nuxt 3 + Sanity</span>
+              <br/>
             </h1>
-            <p
+              <p class="block text-green-700 font-bold sm:text-2xl md:text-4xl xl:inline"
+                >Sanity demo with Authentication</p>
+           <!--  <p
               class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0"
             >
               May the force be with you...
-            </p>
+            </p> -->
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <NuxtLink to="/starships">
+              <NuxtLink to="/items">
                 <div class="rounded-md shadow mt-2">
                   <a
-                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-700 px-6 py-2 text-base font-medium text-white hover:bg-orange-500 md:py-2 md:px-6 md:text-lg"
-                    >View Ships</a
+                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-green-700 px-6 py-2 text-base font-medium text-white hover:bg-gray-800 md:py-2 md:px-6 md:text-lg"
+                    >Get Started</a
                   >
                 </div>
               </NuxtLink>
-             <!--  <NuxtLink v-if="!user" to="/login">
-                <div class="rounded-md shadow sm:ml-4 mt-2">
-                  <a
-                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 px-6 py-2 text-base font-medium text-white hover:bg-orange-500 md:py-2 md:px-6 md:text-lg"
-                    >Login</a
-                  >
-                </div>
-              </NuxtLink>
-              <NuxtLink v-if="!user" to="/register">
-                <div class="rounded-md shadow sm:ml-4 mt-2">
-                  <a
-                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 px-6 py-2 text-base font-medium text-white hover:bg-orange-500 md:py-2 md:px-6 md:text-lg"
-                    >Register</a
-                  >
-                </div>
-              </NuxtLink> -->
             </div>
           </div>
         </main>
@@ -126,7 +109,7 @@ const user = useState("user");
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
       <img
         class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
-        src="https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        src="https://images.unsplash.com/photo-1566698217201-4bb26f7e02ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1735&q=80"
         alt=""
       />
     </div>
