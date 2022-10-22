@@ -7,14 +7,33 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
 # npm
 npm install
 
-# pnpm
-pnpm install --shamefully-hoist
+
+sanity start - to run Sanity Studio
+
+// Other helpful commands
+sanity docs - to open the documentation in a browser
+sanity manage - to open the project settings in a browser
+sanity help - to explore the CLI manual
+
+
+
+// sanity image builder: 
+
+npm install --save @sanity/image-url 
+
+
+
+// creating new datasets 
+
+sanity dataset create staging
+
+sanity dataset export production 
+
+sanity dataset import data.tar.gz staging
+
 ```
 
 ## Development Server

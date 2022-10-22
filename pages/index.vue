@@ -30,7 +30,7 @@ const user = useState("user");
               <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                 <div class="flex w-full items-center justify-between md:w-auto">
                   <a href="#">
-                    <span class="sr-only">Star Wars Directory</span>
+                    <span class="sr-only">nuxt 3 + sanity</span>
                     <!-- <img alt="Your Company" class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=600" /> -->
                   </a>
                 </div>
@@ -93,7 +93,7 @@ const user = useState("user");
               May the force be with you...
             </p> -->
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <NuxtLink to="/items">
+              <NuxtLink to="/posts">
                 <div class="rounded-md shadow mt-2">
                   <a
                     class="flex w-full items-center justify-center rounded-md border border-transparent bg-green-700 px-6 py-2 text-base font-medium text-white hover:bg-gray-800 md:py-2 md:px-6 md:text-lg"
