@@ -1,40 +1,28 @@
 <template>
   <div class="container mx-auto mt-6" v-if="post">
     <div class="gap-3 px-4">
-     <!--  <Image
+     <Image
         class="h-52 lg:h-96 w-full lg:w-3/4 xl:w-3/5 lg:rounded lg:m-auto lg:mt-4 object-cover"
         :asset="post.mainImage"
-      ></Image> -->
+      ></Image>
       <h1>{{ post.title }}</h1>
       <div class="mt-10 prose dark:prose-invert prose-indigo prose-lg mx-auto">
-        <SanityBlocks :blocks="post.body" :serializers="serializers" />
+       <SanityBlocks :blocks="post.body" />
       </div>
     </div>
+    <NuxtLink to="/posts"><button class="rounded-md border border-transparent bg-green-700 px-6 py-2 text-base font-medium text-white hover:bg-gray-800 md:py-2 md:px-6 md:text-lg">View All</button></NuxtLink>
   </div>
 </template>
 
 <script setup>
 import { SanityBlocks } from "sanity-blocks-vue-component";
-// import { Serializers } from "sanity-blocks-vue-component/dist/types";
 import Image from "~/components/Image.vue";
 
 const route = useRoute();
 
-
-/* const serializers: Partial<Serializers> = {
-  types: {
-    image: Image
-  },
-}; */
+const query = groq`*[_type == "post" && slug.current == "${route.params.id}"][0]`;
+const sanity = useSanity()
 
 /* fetch single post from sanity */
 const { data: post } = await useAsyncData("post", () => sanity.fetch(query));
-
-/* const { data: post } = await useFetch(
-  `https://942rgs6c.apicdn.sanity.io/v2022-04-08/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%20%26%26%20slug.current%20%3D%3D%20%24slug%5D%5B0%5D%7B%0A%20%20...%2C%22categories%22%3A%20categories%5B%5D-%3Etitle%2C%0A%20%20%22mainImageUrl%22%3A%20mainImage.asset-%3Eurl%0A%7D&%24slug=%22${route.params.id}%22`,
-  {
-    transform: (data: { result: Record<any, any> }) => data.result,
-    key: `post-transform-${route.params.id}`,
-  }
-); */
 </script>
