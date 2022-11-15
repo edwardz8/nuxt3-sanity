@@ -6,6 +6,7 @@ const sanity = useSanity();
 const props = defineProps(['post'])
 
 /* pagination */
+const results = ref({});
 const count = ref("");
 const perPage = ref(6);
 const page = ref(1);
@@ -14,8 +15,8 @@ const loadingPrev = ref(false);
 
 /* sanity fetch */
 const { data } = await useAsyncData("posts", () => sanity.fetch(query));
-// results.value = data.value.results
-// count.value = data.value.count
+results.value = data.value.results
+count.value = data.value.count
 </script>
 
 <template>

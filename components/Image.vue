@@ -4,6 +4,7 @@
 
 <script lang="ts" setup>
 import imageUrlBuilder from "@sanity/image-url";
+
 interface Props {
   asset: {
     _ref: string;
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const { asset, width = 960 } = defineProps<Props>();
+
 const builder = imageUrlBuilder({
   clientConfig: {
     projectId: "tp2qi923",
